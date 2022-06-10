@@ -23,13 +23,13 @@ export default function Home() {
       </Head>
       <Nav />
       <div className="featured">
-        <div className="row">
+        <div className="grid grid-cols-4">
           {inf.map((e) => 
-            <div className="featuredItem col-sm-4" key={e.id}>
+            <div className="featuredItem" key={e.id}>
               <img src={e.thumbnail} alt="ax" className="featuredImg" />
               <div className="featuredTitles">
                 <h1 className="featuredTitle">{e.name}</h1>
-                <h4 className="featuredTitle">Experiences {e.regionId}</h4>
+                <h4 className="featuredTitle text-3xl font-bold">Experiences {e.regionId}</h4>
               </div>
             </div>
           )}
