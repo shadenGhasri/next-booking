@@ -74,18 +74,6 @@ export default function handler(req, res) {
                 "thumbnail": "https://tasteiran.net/Files/qom-tours-experiences-a7df0d.jpg",
                 "count": 4
             },
-            {
-                "id": 44,
-                "regionId": 42,
-                "latitude": 38.2669032,
-                "name": "Ardabil",
-                "longitude": 48.200947,
-                "changed": false,
-                "deleted": false,
-                "isFeatured": true,
-                "thumbnail": "https://tasteiran.net/Files/ardebil-tours-experiences-6dc830.jpg",
-                "count": 7
-            }
         ]
     }
    

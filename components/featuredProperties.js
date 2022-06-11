@@ -6,7 +6,7 @@ const FeaturedProperties = ({imgInf ,name ,regionId , key}) => {
               <img src={imgInf} alt="ax" className="featuredImg" />
               <div className="featuredTitles">
                 <h1 className="featuredTitle">{name}</h1>
-                <h4 className="featuredTitle text-3xl font-bold">Experiences {regionId}</h4>
+                <h4 className="featuredTitle">Experiences {regionId}</h4>
               </div>
             </div>
     );
