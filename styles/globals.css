@@ -279,6 +279,25 @@ header style */
   }
 }
 
+.cards{
+  display: flex;
+  max-width: 1150px;
+  margin: 30px 180px;
+}
+
+.cardItem{
+  width: 375px;
+  height: 300px;
+  background-color: #dadcdf;
+  margin: 0 20px;
+  padding: 7px;
+}
+
+.cardImg{
+  height: 200px;
+  width: 320px;
+}
+
 /* footer */
 
 .footer {

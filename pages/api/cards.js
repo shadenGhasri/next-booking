@@ -11,7 +11,8 @@ export default function handler(req, res) {
     {
         imageCover: "  https://tasteiran.net/Files/shiraz-old-jobs-old-city-walking-tour-tp-b22bf7.jpg",
           organizer: "Walking Tour Through the Last Craftsmen of Old Shiraz",
-    }]
+    }
+  ]
     });
   }
 
