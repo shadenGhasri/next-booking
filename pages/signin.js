@@ -10,7 +10,7 @@ function Sigin() {
             <Signup />
           </div>
           <div className="col-md-7 my-auto">
-            <img className="img-fluid w-100" src={rocketImg} alt=""/>
+            <img className="img-fluid w-100" src="/assets/rocket.png" alt=""/>
           </div>
         </div>
       </div>
