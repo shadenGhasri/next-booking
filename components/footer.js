@@ -14,7 +14,6 @@ const Footer = () => {
   if (!data) return "Loading";
 
   const { information } = data;
-  console.log(information[0])
 
     return (
       <div className="footer">

@@ -1,4 +1,4 @@
-import { info } from "autoprefixer";
+
 
 const FeaturedProperties = ({imgInf ,name ,regionId , key}) => {
     return (

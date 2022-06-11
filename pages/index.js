@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import useSWR from "swr";
+import Cards from "../components/card";
 import FeaturedProperties from "../components/featuredProperties";
 import Footer from "../components/footer";
 import Header from "../components/header";
@@ -37,6 +38,8 @@ export default function Home() {
       }
         </div>
       </div>
+
+      <Cards/>
 
       <Footer/>
       
