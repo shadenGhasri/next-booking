@@ -123,6 +123,7 @@ header style */
   font-weight: 500;
   border: none;
   cursor: pointer;
+  padding: 10px 22px;
 }
 
 /* // header search style */
