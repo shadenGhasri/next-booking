@@ -128,6 +128,7 @@ header style */
 /* // header search style */
 
 .headerSearch {
+  display: flex;
   height: 3.2em;
   background-color: white;
   position: absolute;
@@ -153,6 +154,7 @@ header style */
 .item2,
 .item3 {
   border-right: 0px;
+  width: 30%;
 }
 
 .headerSearchInput {
@@ -217,6 +219,7 @@ header style */
   justify-content: center;
   font-size: larger;
   text-align: center;
+  width: 20%;
 }
 
 @media only screen and (max-width: 768px) {
