@@ -1,5 +1,8 @@
 import Head from "next/head";
+import Link from "next/link";
 import useSWR from "swr";
+import Button from "../components/button";
+import Header from "../components/header";
 import Nav from "../components/navbar";
 
 const fetcher = async () => {
@@ -22,8 +25,11 @@ export default function Home() {
         <title>shaden booking</title>
       </Head>
       <Nav />
-      <div className="featured">
-        <div className="grid grid-cols-4">
+
+      <Header/>
+
+      <div className="featured mt-2">
+        <div className="grid grid-cols-7">
           {inf.map((e) => 
             <div className="featuredItem" key={e.id}>
               <img src={e.thumbnail} alt="ax" className="featuredImg" />
