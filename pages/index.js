@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import useSWR from "swr";
-import Button from "../components/button";
+import FeaturedProperties from "../components/featuredProperties";
 import Header from "../components/header";
 import Nav from "../components/navbar";
 
@@ -30,17 +30,14 @@ export default function Home() {
 
       <div className="featured mt-2">
         <div className="grid grid-cols-7">
-          {inf.map((e) => 
-            <div className="featuredItem" key={e.id}>
-              <img src={e.thumbnail} alt="ax" className="featuredImg" />
-              <div className="featuredTitles">
-                <h1 className="featuredTitle">{e.name}</h1>
-                <h4 className="featuredTitle text-3xl font-bold">Experiences {e.regionId}</h4>
-              </div>
-            </div>
-          )}
+        {
+        inf.map(e =>
+          <FeaturedProperties imgInf={e.thumbnail} key = {e.id} name = {e.name} regionId = {e.regionId}/>)
+      }
         </div>
       </div>
+      
+
     </>
   );
 }
