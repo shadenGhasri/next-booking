@@ -1,9 +1,51 @@
 import { Formik, Form } from 'formik';
 import { TextField } from './TextField';
+import { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import * as Yup from 'yup';
+
+
+// const createOwner = (e)=>{
+//  e.prevenDefault()
+//  const ownerToCreate = {
+//   name : 
+//  }
+// }
  
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  const result = await validate();
+  if (result) {
+    try {
+      setSending(true);
+    } catch (error) {
+      setSending(false);
+      setErrors();
+    }
+  }
+};
+
+const handleInput = (e) => {
+  setAccount((p) => {
+    return {
+      ...p,
+      [e.target.name]: e.target.value,
+    };
+  });
+};
+
 const Signup = () => {
+
+  const [account, setAccount] = useState({
+    firstName:"",
+    lastName:"",
+    username: "",
+    password: "",
+    email:""
+  });
+  const [errors, setErrors] = useState();
+  const [sending, setSending] = useState(false);
+
   const validate = Yup.object({
     firstName: Yup.string()
       .max(15, 'Must be 15 characters or less')
@@ -38,7 +80,7 @@ const Signup = () => {
       {formik => (
         <div className='box_signup'>
           <h1 className="text_sign">Sign Up</h1>
-          <Form>
+          <Form onSubmit={handleSubmit}>
             <TextField label="First Name" name="firstName" type="text" />
             <TextField label="last Name" name="lastName" type="text" />
             <TextField label="Email" name="email" type="email" />
