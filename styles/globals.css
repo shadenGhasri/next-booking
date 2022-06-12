@@ -6,9 +6,7 @@
 
 
 .container{
-  width: 500px;
-  height: 400px;
-  background-color: #9ea2a6;
+
   margin:50px auto;
 }
 
@@ -28,7 +26,6 @@ padding: 50px 30px;
 label {
   font-size: .7rem;
   margin-right: 20px;
-  margin-bottom: 20px;
 }
 
 input.form-control, input.form-control:focus {

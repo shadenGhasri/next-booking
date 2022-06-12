@@ -1,4 +1,5 @@
 import { ErrorMessage, useField } from 'formik';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export const TextField = ({ label, ...props }) => {
   const [field, meta] = useField(props);
@@ -14,3 +15,5 @@ export const TextField = ({ label, ...props }) => {
     </div>
   )
 }
+
+

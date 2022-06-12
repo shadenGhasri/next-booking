@@ -1,5 +1,6 @@
 import { Formik, Form } from 'formik';
 import { TextField } from './TextField';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import * as Yup from 'yup';
  
 const Signup = () => {
