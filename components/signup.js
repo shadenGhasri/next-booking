@@ -25,14 +25,7 @@ const handleSubmit = async (e) => {
   }
 };
 
-const handleInput = (e) => {
-  setAccount((p) => {
-    return {
-      ...p,
-      [e.target.name]: e.target.value,
-    };
-  });
-};
+
 
 const Signup = () => {
 
