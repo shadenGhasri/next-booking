@@ -5,12 +5,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import * as Yup from 'yup';
 
 
-// const createOwner = (e)=>{
-//  e.prevenDefault()
-//  const ownerToCreate = {
-//   name : 
-//  }
-// }
+const handleSubmit = async (event, values, actions) => {
+  event.preventDefault();
+
+  axios.post(url, payload(values.name))
+      .then(res => {
+        // do stuff
+      }).catch(err => {
+        // do other stuff
+  })
+}
  
 
 
@@ -52,7 +56,7 @@ const Signup = () => {
       {formik => (
         <div className='box_signup'>
           <h1 className="text_sign">Sign Up</h1>
-          <Form>
+          <Form method='POST'>
             <TextField label="First Name" name="firstName" type="text" />
             <TextField label="last Name" name="lastName" type="text" />
             <TextField label="Email" name="email" type="email" />
