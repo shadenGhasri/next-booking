@@ -44,45 +44,51 @@ const Signup = () => {
         confirmPassword: "",
       }}
       validationSchema={validate}
-            onSubmit ={async(values)=>{
-              const data = {
-                records:[
-                  {
-                    fields:{
-                      firstName : values.firstName,
-                      lastName : values.lastName,
-                      email : values.email,
-                      password : values.password
-                    },
-                  },
-                ],
-              };
-              const axiosConfig = {
-        headers :{
+      onSubmit={async (values) => {
+        const data = {
+          records: [
+            {
+              fields: {
+                firstName: values.firstName,
+                lastName: values.lastName,
+                email: values.email,
+                password: values.password,
+              },
+            },
+          ],
+        };
+        const axiosConfig = {
+          headers: {},
+        };
 
-        }
-      }
-
-      await Axios.post("https://api.buydomains.com/",data,axiosConfig).then((response) => console.log("Successful"))
-        .catch(e=> console.log("error"))
-            }}
-            
-      >
-      {formik => (
-          <div>
-            <h1 className="my-4 font-weight-bold .display-4">Sign Up</h1>
-            <Form>
-              <TextField label="First Name" name="firstName" type="text" />
-              <TextField label="last Name" name="lastName" type="text" />
-              <TextField label="Email" name="email" type="email" />
-              <TextField label="password" name="password" type="password" />
-              <TextField label="Confirm Password" name="confirmPassword" type="password" />
-              <button className="btn btn-dark mt-3" type="submit">Register</button>
-              <button className="btn btn-danger mt-3 ml-3" type="reset">Reset</button>
-            </Form>
-          </div>
-        )}
+        await Axios.post("https://api.buydomains.com/", data, axiosConfig)
+          .then((response) => console.log("Successful"))
+          .catch((e) => console.log("error"));
+      }}
+    >
+      {(formik) => (
+        <div>
+          <h1 className="my-4 font-weight-bold .display-4">Sign Up</h1>
+          <Form>
+            <TextField label="First Name" name="firstName" type="text" />
+            <TextField label="last Name" name="lastName" type="text" />
+            <TextField label="Email" name="email" type="email" />
+            <TextField label="password" name="password" type="password" />
+            <TextField
+              label="Confirm Password"
+              name="confirmPassword"
+              type="password"
+            />
+            <button className="btn btn-dark mt-3" type="submit">
+              Register
+            </button>
+            <button className="btn btn-danger mt-3 ml-3" type="reset">
+              Reset
+            </button>
+          </Form>
+        </div>
+      )}
     </Formik>
-  )
-}
+  );
+};
 export default Signup;
