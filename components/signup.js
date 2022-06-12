@@ -53,18 +53,18 @@ const Signup = () => {
       //                 lastName : values.lastName,
       //                 email : values.email,
       //                 password : values.password
-      //               }
-      //             }
-      //           ]
-      //         }
+      //               },
+      //             },
+      //           ],
+      //         };
       //         const axiosConfig = {
       //   headers :{
 
       //   }
       // }
 
-      // await Axios.post("https://api.buydomains.com/",data,axiosConfig).then(response)=>{
-      //   console.log("Successful").catch(e=>{
+      // await Axios.post("https://api.buydomains.com/",data,axiosConfig).then(response) => {
+      //   console.log("Successful")}).catch(e=>{
       //     console.log("error")
       //   })
       // }
