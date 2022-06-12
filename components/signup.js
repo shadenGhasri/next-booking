@@ -12,32 +12,11 @@ import * as Yup from 'yup';
 //  }
 // }
  
-const handleSubmit = async (e) => {
-  e.preventDefault();
-  const result = await validate();
-  if (result) {
-    try {
-      setSending(true);
-    } catch (error) {
-      setSending(false);
-      setErrors();
-    }
-  }
-};
-
 
 
 const Signup = () => {
 
-  const [account, setAccount] = useState({
-    firstName:"",
-    lastName:"",
-    username: "",
-    password: "",
-    email:""
-  });
-  const [errors, setErrors] = useState();
-  const [sending, setSending] = useState(false);
+
 
   const validate = Yup.object({
     firstName: Yup.string()
@@ -73,7 +52,7 @@ const Signup = () => {
       {formik => (
         <div className='box_signup'>
           <h1 className="text_sign">Sign Up</h1>
-          <Form onSubmit={handleSubmit}>
+          <Form>
             <TextField label="First Name" name="firstName" type="text" />
             <TextField label="last Name" name="lastName" type="text" />
             <TextField label="Email" name="email" type="email" />
