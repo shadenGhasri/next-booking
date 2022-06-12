@@ -44,31 +44,28 @@ const Signup = () => {
         confirmPassword: "",
       }}
       validationSchema={validate}
-      //       onSubmit ={async(values)=>{
-      //         const data = {
-      //           records:[
-      //             {
-      //               fields:{
-      //                 firstName : values.firstName,
-      //                 lastName : values.lastName,
-      //                 email : values.email,
-      //                 password : values.password
-      //               },
-      //             },
-      //           ],
-      //         };
-      //         const axiosConfig = {
-      //   headers :{
+            onSubmit ={async(values)=>{
+              const data = {
+                records:[
+                  {
+                    fields:{
+                      firstName : values.firstName,
+                      lastName : values.lastName,
+                      email : values.email,
+                      password : values.password
+                    },
+                  },
+                ],
+              };
+              const axiosConfig = {
+        headers :{
 
-      //   }
-      // }
+        }
+      }
 
-      // await Axios.post("https://api.buydomains.com/",data,axiosConfig).then(response) => {
-      //   console.log("Successful")}).catch(e=>{
-      //     console.log("error")
-      //   })
-      // }
-      //       }}
+      await Axios.post("https://api.buydomains.com/",data,axiosConfig).then((response) => console.log("Successful"))
+        .catch(e=> console.log("error"))
+            
     >
       {(formik) => (
         <div className="box_signup">
