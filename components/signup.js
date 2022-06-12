@@ -65,31 +65,24 @@ const Signup = () => {
 
       await Axios.post("https://api.buydomains.com/",data,axiosConfig).then((response) => console.log("Successful"))
         .catch(e=> console.log("error"))
+            }}
             
-    >
-      {(formik) => (
-        <div className="box_signup">
-          <h1 className="text_sign">Sign Up</h1>
-          <Form method="POST">
-            <TextField label="First Name" name="firstName" type="text" />
-            <TextField label="last Name" name="lastName" type="text" />
-            <TextField label="Email" name="email" type="email" />
-            <TextField label="password" name="password" type="password" />
-            <TextField
-              label="Confirm Password"
-              name="confirmPassword"
-              type="password"
-            />
-            <button className="btn btn-dark mt-3" type="submit">
-              Register
-            </button>
-            <button className="btn btn-danger mt-3 ml-3" type="reset">
-              Reset
-            </button>
-          </Form>
-        </div>
-      )}
+      >
+      {formik => (
+          <div>
+            <h1 className="my-4 font-weight-bold .display-4">Sign Up</h1>
+            <Form>
+              <TextField label="First Name" name="firstName" type="text" />
+              <TextField label="last Name" name="lastName" type="text" />
+              <TextField label="Email" name="email" type="email" />
+              <TextField label="password" name="password" type="password" />
+              <TextField label="Confirm Password" name="confirmPassword" type="password" />
+              <button className="btn btn-dark mt-3" type="submit">Register</button>
+              <button className="btn btn-danger mt-3 ml-3" type="reset">Reset</button>
+            </Form>
+          </div>
+        )}
     </Formik>
-  );
-};
+  )
+}
 export default Signup;
