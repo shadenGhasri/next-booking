@@ -6,16 +6,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import * as Yup from 'yup';
 
 
-const handleSubmit = async (event, values, actions) => {
-  event.preventDefault();
+// const handleSubmit = async (event, values, actions) => {
+//   event.preventDefault();
 
-  axios.post(url, payload(values.name))
-      .then(res => {
-        // do stuff
-      }).catch(err => {
-        // do other stuff
-  })
-}
+//   axios.post(url, payload(values.name))
+//       .then(res => {
+//         // do stuff
+//       }).catch(err => {
+//         // do other stuff
+//   })
+// }
 
 // i can't find api
  
@@ -52,9 +52,31 @@ const Signup = () => {
         confirmPassword: ''
       }}
       validationSchema={validate}
-      onSubmit={values => {
-        console.log(values)
-      }}
+//       onSubmit ={async(values)=>{
+//         const data = {
+//           records:[
+//             {
+//               fields:{
+//                 firstName : values.firstName,
+//                 lastName : values.lastName,
+//                 email : values.email,
+//                 password : values.password
+//               }
+//             }
+//           ]
+//         }
+//         const axiosConfig = {
+//   headers :{
+      
+//   }
+// }
+
+// await axios.post("url",data,axiosConfig).then(response)=>{
+//   console.log("Successful").catch(e=>{
+//     console.log("error")
+//   })
+// }
+//       }}
     >
       {formik => (
         <div className='box_signup'>
