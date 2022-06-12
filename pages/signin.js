@@ -1,5 +1,5 @@
 
-import rocketImg from "../assets/rocket.png"
+
 import Signup from '../components/signup';
 
 function Sigin() {
