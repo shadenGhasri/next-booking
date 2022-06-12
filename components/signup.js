@@ -35,8 +35,8 @@ const Signup = () => {
       }}
     >
       {formik => (
-        <div>
-          <h1 className="my-4 font-weight-bold .display-4">Sign Up</h1>
+        <div className='box_signup'>
+          <h1 className="text_sign">Sign Up</h1>
           <Form>
             <TextField label="First Name" name="firstName" type="text" />
             <TextField label="last Name" name="lastName" type="text" />

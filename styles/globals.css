@@ -5,8 +5,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 
+.container{
+  width: 500px;
+  height: 400px;
+  background-color: #9ea2a6;
+  margin:50px auto;
+}
+
+.box_signup{
+padding: 50px 30px;
+}
+
+.textField_box{
+  margin-bottom: 10px;
+}
+.text_sign{
+  text-align: center;
+  font-size: large;
+  font-weight: bold
+}
+
 label {
   font-size: .7rem;
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
 
 input.form-control, input.form-control:focus {
