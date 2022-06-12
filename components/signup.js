@@ -71,7 +71,7 @@ const Signup = () => {
 //   }
 // }
 
-// await axios.post("url",data,axiosConfig).then(response)=>{
+// await axios.post("https://api.buydomains.com/locale/detect?timestamp=1655014892896",data,axiosConfig).then(response)=>{
 //   console.log("Successful").catch(e=>{
 //     console.log("error")
 //   })
