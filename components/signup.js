@@ -16,7 +16,6 @@ import * as Yup from "yup";
 //   })
 // }
 
-
 // i can't find api
 
 const Signup = () => {
@@ -64,7 +63,7 @@ const Signup = () => {
       //   }
       // }
 
-      // await Axios.post("https://api.buydomains.com/locale/detect?timestamp=1655014892896",data,axiosConfig).then(response)=>{
+      // await Axios.post("https://api.buydomains.com/",data,axiosConfig).then(response)=>{
       //   console.log("Successful").catch(e=>{
       //     console.log("error")
       //   })
